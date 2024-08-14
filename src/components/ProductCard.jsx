@@ -8,13 +8,15 @@ const ProductCard = (props) => {
   return (
     <>
       <div
-        className={`${location.pathname == "/store" ? `gr-${grid}` : "col-3"}`}
+        className={`${
+          location.pathname == "/product" ? `gr-${grid}` : "col-3"
+        }`}
       >
         <Link to=":id" className="product-card position-relative">
           <div className="wishlist-icon position-absolute">
-            <Link >
+            <button className="border-0 bg-transparent">
               <img src="images/wish.svg" alt="wishlist" />
-            </Link>
+            </button>
           </div>
           <div className="product-image">
             <div>
@@ -34,31 +36,30 @@ const ProductCard = (props) => {
             <ReactStars
               count={5}
               size={24}
-              value="3"
+              value={3}
               edit={false}
               activeColor="#ffd700"
             />
-            <p className={`description ${grid >= 6 ? "d-block": "d-none"}`}>
+            <p className={`description ${grid >= 6 ? "d-block" : "d-none"}`}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quia
               quos iusto a officia consequatur similique beatae sint facere
               voluptate, at odio asperiores eum! Ea eveniet totam nam reiciendis
               porro?
             </p>
             <p className="price">$100.00</p>
-            
           </div>
 
           <div className="action-bar position-absolute">
             <div className="d-flex flex-column">
-              <Link>
+              <button>
                 <img src="images/prodcompare.svg" alt="compare" />
-              </Link>
-              <Link>
+              </button>
+              <button>
                 <img src="images/view.svg" alt="view" />
-              </Link>
-              <Link>
+              </button>
+              <button>
                 <img src="images/add-cart.svg" alt="addcart" />
-              </Link>
+              </button>
             </div>
           </div>
         </Link>
@@ -90,18 +91,17 @@ const ProductCard = (props) => {
             <ReactStars
               count={5}
               size={24}
-              value="3"
+              value={3}
               edit={false}
               activeColor="#ffd700"
             />
-            <p className={`description ${grid >= 6 ? "d-block": "d-none"}`}>
+            <p className={`description ${grid >= 6 ? "d-block" : "d-none"}`}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quia
               quos iusto a officia consequatur similique beatae sint facere
               voluptate, at odio asperiores eum! Ea eveniet totam nam reiciendis
               porro?
             </p>
             <p className="price">$100.00</p>
-            
           </div>
 
           <div className="action-bar position-absolute">
